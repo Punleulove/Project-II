@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@300;400;700;900&display=swap');
+*{
+    font-family: 'Hanuman', serif;;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border:none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    font-weight: 400;
+    transition: all 0.3s linear;
+
+}
+
+:root{
+ --pink :#FF60DC;
+ --black :#354046;
+}
+*::selection{
+    background: var(--pink);
+    overflow: hidden;
+}
+body{
+    overflow-x:hidden;
+    height: 400px;
+}
+header a{
+    color: var(--black);
+}
+header li:hover a{
+     color: var(--pink);
+}
+.fa-times{
+    transform: rotate(180deg);
+}
+header .nav-show{
+    top:50%;
+    opacity: 1;
+}
+.nav li:nth-child(1):hover ~ .hover{
+    width: 10rem;
+    opacity: 1;
+    left: 0;
+}
+.nav li:nth-child(2):hover~.hover {
+    width: 10rem;
+    opacity: 1;
+    left: 9rem;
+}
+.nav li:nth-child(3):hover~.hover {
+    width: 10rem;
+    opacity: 1;
+    left: 18rem;
+}
+.nav li:nth-child(4):hover~.hover {
+    width: 10rem;
+    opacity: 1;
+    left: 27rem;
+}
+.nav li:nth-child(5):hover~.hover {
+    width: 10rem;
+    opacity: 1;
+    left: 36rem;
+}
+.nav li:nth-child(6):hover~.hover {
+    width: 10rem;
+    opacity: 1;
+    left: 45rem;
+}
+.nav li:nth-child(7):hover~.hover {
+    width: 10rem;
+    opacity: 1;
+    left: 52rem;
+}
+.nav ul:hover > :not(:hover){
+    filter: blue(2px);
+    opacity: 70%;
+}

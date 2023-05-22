@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/output.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="w-full h-screen bg-slate-400 flex justify-center"> 
+       <div class="w-[30rem] h-">
+        <div class="w-full h-[20rem]">
+            <form class="w-full h-full pt-10">
+             <label >full name:</label>
+             <input type="text" id="fullname" class="focus:outline-none rounded-2xl" placeholder="username"><br><br>
+             <label>Password:</label>
+             <input type="password" id="pass" class="focus:outline-none rounded-2xl " placeholder="******">
+             <div class="mt-10 p-3">
+                <button onclick="Show()" class="w-20 h-10 bg-green-300 hover:bg-green-600" type="button">Submit</button>
+                <button onclick="ref()" class="w-20 h-10 bg-red-400 hover:bg-red-600" type="button" >Refresh</button>
+             </div>
+            </form>
+        </div>
+        <div class="w-full h-[20rem]">
+            <h1 class="text-white"> Show Data List</h1>
+            <div class="w-full h-full">
+                <table class="w-full">
+                    <thead>
+                        <tr >
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+
+                <tbody id="tb">
+
+                </tbody>
+                </table>
+            </div>
+        </div>
+       </div>
+    </main>
+</body>
+<script>
+    function Show(){
+        var name = document.querySelector('#fullname').value;
+        var passw=document.querySelector('#pass').value;
+        var text=document.querySelector('#tb');
+        text.innerHTML=text.innerHTML+"<tr class='text-white'><th>"+name+"</th><th>"+passw+"</tr>";
+    }
+    function ref(){
+        name=document.querySelector("#fullname").value="";
+        passw=document.querySelector("#pass").value="";
+    }
+</script>
+</html>
